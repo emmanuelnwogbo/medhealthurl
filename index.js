@@ -9,6 +9,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send({
+    message: "hello there",
+  });
+});
+
 app.get("/url", (req, res) => {
   res.send({
     url,
